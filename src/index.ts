@@ -11,13 +11,13 @@ import * as ExpirationCompleteEvent from './events/expiration-complete-event';
 import * as PaymentCreatedEvent from './events/payment-created-event';
 
 module.exports = {
-    BaseListener,
-    BasePublisher,
-    Subjects,
-    TicketCreatedEvent,
-    TicketUpdatedEvent,
-    OrderCancelledEvent,
-    UserCreatedEvent,
-    ExpirationCompleteEvent,
-    PaymentCreatedEvent
+  BaseListener,
+  BasePublisher,
+  Subjects,
+  TicketCreatedEvent,
+  TicketUpdatedEvent,
+  OrderCancelledEvent,
+  UserCreatedEvent,
+  ExpirationCompleteEvent,
+  PaymentCreatedEvent
 }
