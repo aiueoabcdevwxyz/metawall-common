@@ -3,6 +3,8 @@ export enum Subjects {
   TicketUpdated = 'ticket:updated',
 
   UserCreated = 'user:created',
+  PostCreated = 'post:created',
+  
   OrderCancelled = 'order:cancelled',
 
   ExpirationComplete = 'expiration:complete',
