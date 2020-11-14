@@ -2,7 +2,7 @@ import { Subjects } from './subjects';
 import { UserSchema, SubwallSchema, PostSchema, WhoCanReplyType } from '../schemaTypes';
 
 export interface PostCreatedEvent {
-  subject: Subjects.UserCreated;
+  subject: Subjects.PostCreated;
   data: {
     _id: string;
     uid: string;
