@@ -10,7 +10,7 @@ interface Event {
 export abstract class Listener<T extends Event> {
   abstract subject: T['subject'];
   abstract queueGroupName: string;
-  abstract onMessage(data: T['data'], msg: any): void;
+  abstract onMessage(data: T['data']): void;
   protected client: NATS.Client;
   protected ackWait = 5 * 1000;
 
@@ -34,13 +34,20 @@ export abstract class Listener<T extends Event> {
     //   this.subscriptionOptions()
     // );
 
-    this.client.subscribe(this.subject, (msg: any, reply: any) => {
+    this.client.subscribe(this.subject, (msg: string, _reply: any) => {
       console.log(`Message received: ${this.subject} / ${this.queueGroupName}`);
 
+
       // msg is a parsed JSON object object
-      if(msg) {
-        const parsedData = this.parseMessage(msg);
-        this.onMessage(parsedData, msg);
+
+      if(Boolean(msg)) {
+        try {
+          const data: T['data'] = JSON.parse(msg);
+          this.onMessage(data);
+        } catch {
+          console.log('error')
+          throw new Error('Data sucks')
+        }
       }
     })
   }

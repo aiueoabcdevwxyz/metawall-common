@@ -8,7 +8,6 @@ export interface UserCreatedEvent {
     firebaseUID: string;
     createdAt: Date;
     updatedAt: Date;
-  
     username: string;
     displayName: string;
     biography: string;
