@@ -1,23 +1,11 @@
 
 
-import * as BaseListener from './events/base-listener';
-import * as BasePublisher from './events/base-publisher';
-import * as Subjects from './events/subjects';
-import * as TicketCreatedEvent from './events/ticket-created-event';
-import * as TicketUpdatedEvent from './events/ticket-updated-event';
-import * as OrderCancelledEvent from './events/order-cancelled-event';
-import * as UserCreatedEvent from './events/user-created-event';
-import * as ExpirationCompleteEvent from './events/expiration-complete-event';
-import * as PaymentCreatedEvent from './events/payment-created-event';
-
-module.exports = {
-  ...BaseListener,
-  ...BasePublisher,
-  ...Subjects,
-  ...TicketCreatedEvent,
-  ...TicketUpdatedEvent,
-  ...OrderCancelledEvent,
-  ...UserCreatedEvent,
-  ...ExpirationCompleteEvent,
-  ...PaymentCreatedEvent
-}
+export * from './events/base-listener';
+export * from './events/base-publisher';
+export * from './events/subjects';
+export * from './events/ticket-created-event';
+export * from './events/ticket-updated-event';
+export * from './events/order-cancelled-event';
+export * from './events/user-created-event';
+export * from './events/expiration-complete-event';
+export * from './events/payment-created-event';

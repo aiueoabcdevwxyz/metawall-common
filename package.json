@@ -3,7 +3,6 @@
   "version": "1.0.26",
   "description": "",
   "main": "./build/index.js",
-  "private": true,
   "types": "./build/index.d.ts",
   "files": [
     "build/**/*"
@@ -14,8 +13,8 @@
     "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "aiueoabcdevwxyz",
+  "license": "MIT",
   "devDependencies": {
     "del-cli": "^3.0.0",
     "typescript": "^3.8.3"
