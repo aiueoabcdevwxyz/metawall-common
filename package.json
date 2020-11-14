@@ -1,5 +1,5 @@
 {
-  "name": "@metawall/common",
+  "name": "metawall-common",
   "version": "1.0.25",
   "description": "",
   "main": "./build/index.js",
