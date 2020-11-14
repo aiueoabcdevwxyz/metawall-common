@@ -3,6 +3,7 @@
   "version": "1.0.26",
   "description": "",
   "main": "./build/index.js",
+  "private": true,
   "types": "./build/index.d.ts",
   "files": [
     "build/**/*"
